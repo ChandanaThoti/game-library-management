@@ -4,14 +4,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "run":"tsc src/gameLibraryApp.ts",
-    "start":"node dist/gameLibraryApp.js"
+    "run": "tsc src/gameLibraryApp.ts",
+    "start": "node dist/gameLibraryApp.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@types/jest": "^30.0.0",
+    "axios": "^1.10.0",
+    "dotenv": "^17.0.1",
     "typescript": "^5.8.3"
   }
 }
