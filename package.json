@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "run": "tsc src/gameLibraryApp.ts",
-    "start": "node dist/gameLibraryApp.js"
+    "start": "node dist/gameLibraryApp.js",
+     "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "start:api": "json-server src/data/employeeApiData.json --port 3000"
+
   },
   "keywords": [],
   "author": "",
