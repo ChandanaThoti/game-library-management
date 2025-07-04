@@ -24,15 +24,14 @@ Game Library Management is a cli application that simulates a basic game library
 - Clone the project and change directory to naishma-app
 
 ``` bash 
-git clone https://github.com/ChandanaThoti/budget-mind-cli-app.git
-cd budget-mind-cli-app
+git clone https://github.com/ChandanaThoti/game-library-management.git
+cd game-library-management
 ```
 
 ## Installation
 
 ``` bash
     npm install                      # Install node packages
-    npm install typescript           # Install TypeScript 
 ```
 
 ## Start Project
