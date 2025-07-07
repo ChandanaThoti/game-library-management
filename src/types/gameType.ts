@@ -2,7 +2,7 @@ export type Game={
     id:number,
     name:string,
     genre:string,
-    price:string,
+    price:number,
     platform:string,
     rating:number
 }
