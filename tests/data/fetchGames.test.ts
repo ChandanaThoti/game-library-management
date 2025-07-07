@@ -17,5 +17,14 @@ describe("fetchGames",()=>{
         expect(result).toHaveLength(3)
         expect(result).toEqual(mockedGames)
     });
-    
+    test("Catch error when failed to fetch data",()=>{
+        mockedAxios.get.mockRejectedValueOnce(new Error("Error fetching games"))
+        const result=fetchGames("mockapi/games");
+        expect(result).rejects.toThrow("Error fetching games")
+    })
+    test("display [] when no employee found on fetching",async()=>{
+        mockedAxios.get.mockResolvedValueOnce({data:[]})
+        const result=await fetchGames("mockapi/games");
+        expect(result).toEqual([])
+    })
 })
