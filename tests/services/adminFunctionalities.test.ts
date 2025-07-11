@@ -3,9 +3,11 @@ import { selectRole } from "../../src/services/selectRole";
 import { Game } from "../../src/types/gameType";
 import { addGameByAdmin } from "../../src/utils/addGameByAdmin";
 import { removeGameByAdmin } from "../../src/utils/removeGameByAdmin";
+import { viewAllGames } from "../../src/utils/viewAllGames";
 jest.mock("../../src/utils/addGameByAdmin")
 jest.mock("../../src/services/selectRole")
 jest.mock("../../src/utils/removeGameByAdmin")
+jest.mock("../../src/utils/viewAllGames")
 describe("admin Functionalities",()=>{
     let consoleLogSpy:jest.SpyInstance;
     let mockGames:Game[];
@@ -24,6 +26,11 @@ describe("admin Functionalities",()=>{
         promptMock.mockReturnValueOnce("2")
         adminFunctionalities(mockGames,promptMock);
         expect(removeGameByAdmin).toHaveBeenCalledWith(mockGames,promptMock)
+    })
+    test("test viewAllGames is called or not",()=>{
+        promptMock.mockReturnValueOnce("3")
+        adminFunctionalities(mockGames,promptMock);
+        expect(viewAllGames).toHaveBeenCalled()
     })
     test("test selectRole is called or not",()=>{
         promptMock.mockReturnValueOnce("4")
