@@ -19,6 +19,7 @@ Game Library Management is a cli application that simulates a basic game library
 ## Features
 
 - Add game functionality allow admin to add game with name,genre,price,platform,rating with validations.
+- Remove game functinality allow user to remove a game from games by selecting name.
 
 ## Tech Stack
 
