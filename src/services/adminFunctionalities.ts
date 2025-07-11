@@ -1,5 +1,6 @@
 import { Game } from "../types/gameType";
 import { addGameByAdmin } from "../utils/addGameByAdmin";
+import { removeGameByAdmin } from "../utils/removeGameByAdmin";
 import { selectRole } from "./selectRole";
 
 export function adminFunctionalities(games:Game[],prompt:(msg:string)=>string):any{
@@ -13,6 +14,9 @@ export function adminFunctionalities(games:Game[],prompt:(msg:string)=>string):a
     switch(operation){
         case "1":
             addGameByAdmin(games,prompt)
+            break;
+        case "2":
+            removeGameByAdmin(games,prompt)
             break;
         case "4": 
             selectRole(games,prompt)
