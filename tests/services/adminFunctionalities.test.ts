@@ -2,8 +2,10 @@ import { adminFunctionalities } from "../../src/services/adminFunctionalities";
 import { selectRole } from "../../src/services/selectRole";
 import { Game } from "../../src/types/gameType";
 import { addGameByAdmin } from "../../src/utils/addGameByAdmin";
+import { removeGameByAdmin } from "../../src/utils/removeGameByAdmin";
 jest.mock("../../src/utils/addGameByAdmin")
 jest.mock("../../src/services/selectRole")
+jest.mock("../../src/utils/removeGameByAdmin")
 describe("admin Functionalities",()=>{
     let consoleLogSpy:jest.SpyInstance;
     let mockGames:Game[];
@@ -18,7 +20,12 @@ describe("admin Functionalities",()=>{
         adminFunctionalities(mockGames,promptMock);
         expect(addGameByAdmin).toHaveBeenCalledWith(mockGames,promptMock)
     })
-    test("test addGame is called or not",()=>{
+    test("test removeGame is called or not",()=>{
+        promptMock.mockReturnValueOnce("2")
+        adminFunctionalities(mockGames,promptMock);
+        expect(removeGameByAdmin).toHaveBeenCalledWith(mockGames,promptMock)
+    })
+    test("test selectRole is called or not",()=>{
         promptMock.mockReturnValueOnce("4")
         adminFunctionalities(mockGames,promptMock);
         expect(selectRole).toHaveBeenCalled()
