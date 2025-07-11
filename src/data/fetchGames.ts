@@ -4,7 +4,7 @@ export async function fetchGames(apiUrl:string):Promise<Game[]>{
     try{
        const response:AxiosResponse = await axios.get(apiUrl);
        return response.data.map((game:Game)=>({
-        id:game.id,
+        id:Number(game.id),
         name:game.name,
         genre:game.genre,
         price:game.price,
