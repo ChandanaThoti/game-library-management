@@ -7,32 +7,38 @@ Game Library Management is a cli application that simulates a basic game library
 ## Table of Contents
 
 - [Description](#-description)
+- [Features](#-features)
 - [Tech Stack](#-tech-stack)
 - [Clone Project](#-clone-project)
 - [Installation](#-installation)
 - [Start Project](#-start-project)
+- [Testing](#-testing)
 - [Contact Information](#-contact-information)
 - [Contributions](#-contributions)
+
+## Features
+
+- Search game => search game by keyword of title from available games.
 
 ## Tech Stack
 
 - > Typescript
 - > Node.js for execution
+- > Jest for Testing
 
 ## Clone Project
 
 - Clone the project and change directory to naishma-app
 
 ``` bash 
-git clone https://github.com/ChandanaThoti/budget-mind-cli-app.git
-cd budget-mind-cli-app
+git clone https://github.com/ChandanaThoti/game-library-management.git
+cd game-library-management
 ```
 
 ## Installation
 
 ``` bash
     npm install                      # Install node packages
-    npm install typescript           # Install TypeScript 
 ```
 
 ## Start Project
@@ -41,6 +47,15 @@ cd budget-mind-cli-app
     tsc             # Compile entry base file
     npm start       # Execute the compiled file
 ```
+
+## Testing
+
+- Jest is used for testing.
+- Test cases are written to verify expected outcome is returned or not.
+``` bash
+    npm run test           # To verify whether test passing
+    npm run test:coverage             # To verify the coverage 
+``` 
 
 ## Contact Information
 
