@@ -7,17 +7,24 @@ Game Library Management is a cli application that simulates a basic game library
 ## Table of Contents
 
 - [Description](#-description)
+- [Features](#-features)
 - [Tech Stack](#-tech-stack)
 - [Clone Project](#-clone-project)
 - [Installation](#-installation)
 - [Start Project](#-start-project)
+- [Testing](#-testing)
 - [Contact Information](#-contact-information)
 - [Contributions](#-contributions)
+
+## Features
+
+- Search game => search game by keyword of title from available games.
 
 ## Tech Stack
 
 - > Typescript
 - > Node.js for execution
+- > Jest for Testing
 
 ## Clone Project
 
@@ -40,6 +47,15 @@ cd game-library-management
     tsc             # Compile entry base file
     npm start       # Execute the compiled file
 ```
+
+## Testing
+
+- Jest is used for testing.
+- Test cases are written to verify expected outcome is returned or not.
+``` bash
+    npm run test           # To verify whether test passing
+    npm run test:coverage             # To verify the coverage 
+``` 
 
 ## Contact Information
 
