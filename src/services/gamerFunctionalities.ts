@@ -1,4 +1,5 @@
 import { Game } from "../types/gameType";
+import { filterGamesByGamer } from "../utils/filterGamesByGamer";
 import { searchGameByGamer } from "../utils/searchGameByGamer";
 import { selectRole } from "./selectRole";
 
@@ -17,6 +18,11 @@ export function gamerFunctionalities(games:Game[],prompt:(msg:string)=>string){
             searchGameByGamer(games,prompt);
             break;
 
+        case "2":
+        case "filter games":
+            filterGamesByGamer(games,prompt);
+            break;
+            
         case "5":
         case "back":
             selectRole(games,prompt);
