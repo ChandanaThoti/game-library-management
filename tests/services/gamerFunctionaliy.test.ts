@@ -2,9 +2,11 @@ import { gamerFunctionalities } from "../../src/services/gamerFunctionalities";
 import { searchGameByGamer } from "../../src/utils/searchGameByGamer";
 import { selectRole } from "../../src/services/selectRole";
 import { Game } from "../../src/types/gameType";
+import { filterGamesByGamer } from "../../src/utils/filterGamesByGamer";
 
 jest.mock("../../src/utils/searchGameByGamer");
 jest.mock("../../src/services/selectRole");
+jest.mock("../../src/utils/filterGamesByGamer")
 
 describe("gamerFunctionality",()=>{
     let logSpy:jest.SpyInstance;
@@ -26,6 +28,12 @@ describe("gamerFunctionality",()=>{
         promptMock.mockReturnValueOnce("search game")
         gamerFunctionalities(games,promptMock);
         expect(searchGameByGamer).toHaveBeenCalledWith(games,promptMock)
+    })
+
+    test("should call filterGamesByGamer on input 'filter games'",()=>{
+        promptMock.mockReturnValueOnce("2")
+        gamerFunctionalities(games,promptMock);
+        expect(filterGamesByGamer).toHaveBeenCalledWith(games,promptMock)
     })
     
     test("should return to previous section on iput '5'",()=>{
