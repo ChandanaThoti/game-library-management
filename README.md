@@ -20,6 +20,7 @@ Game Library Management is a cli application that simulates a basic game library
 
 - Search game => search game by keyword of title from available games.
 - Filter games by gamer choice like by price, genre and rating with validations.
+- Add game to wishlist by gamer by name or id.
 
 ## Tech Stack
 
