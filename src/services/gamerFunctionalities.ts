@@ -2,6 +2,7 @@ import { Game } from "../types/gameType";
 import { addToWishlistByGamer } from "../utils/addToWishlistByGamer";
 import { filterGamesByGamer } from "../utils/filterGamesByGamer";
 import { searchGameByGamer } from "../utils/searchGameByGamer";
+import { viewWishlistByGamer } from "../utils/viewWishlistByGamer";
 import { selectRole } from "./selectRole";
 
 export function gamerFunctionalities(games:Game[],prompt:(msg:string)=>string){
@@ -27,6 +28,11 @@ export function gamerFunctionalities(games:Game[],prompt:(msg:string)=>string){
         case "3":
         case "add to wishlist":
             addToWishlistByGamer(games,prompt);
+            break;
+        
+        case "4":
+        case "view wishlist":
+            viewWishlistByGamer(games,prompt);
             break;
             
         case "5":
