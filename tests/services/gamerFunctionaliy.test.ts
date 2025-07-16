@@ -4,11 +4,13 @@ import { selectRole } from "../../src/services/selectRole";
 import { Game } from "../../src/types/gameType";
 import { filterGamesByGamer } from "../../src/utils/filterGamesByGamer";
 import { addToWishlistByGamer } from "../../src/utils/addToWishlistByGamer";
+import { viewWishlistByGamer } from "../../src/utils/viewWishlistByGamer";
 
 jest.mock("../../src/utils/searchGameByGamer");
 jest.mock("../../src/services/selectRole");
 jest.mock("../../src/utils/filterGamesByGamer")
 jest.mock("../../src/utils/addToWishlistByGamer")
+jest.mock("../../src/utils/viewWishlistByGamer")
 
 describe("gamerFunctionality",()=>{
     let logSpy:jest.SpyInstance;
@@ -42,6 +44,12 @@ describe("gamerFunctionality",()=>{
         promptMock.mockReturnValueOnce("add to wishlist")
         gamerFunctionalities(games,promptMock);
         expect(addToWishlistByGamer).toHaveBeenCalledWith(games,promptMock)
+    })
+
+    test("should call filterGamesByGamer on input 'view wishlist'",()=>{
+        promptMock.mockReturnValueOnce("view wishlist")
+        gamerFunctionalities(games,promptMock);
+        expect(viewWishlistByGamer).toHaveBeenCalledWith(games,promptMock)
     })
     
     test("should return to previous section on input '5'",()=>{
