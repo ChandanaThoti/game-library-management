@@ -1,0 +1,8 @@
+name: GitHub Actions on Game Library
+on: [push]
+jobs:
+  Apply-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Job triggered automatically by event"
+  
