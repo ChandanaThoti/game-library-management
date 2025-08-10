@@ -2,7 +2,7 @@
 
 ## Description
 
-Game Library Management is a cli application that simulates a basic game library and store system.The app support role based system with admin and gamer. Game data fetched from api and performed operations.
+Game Library Management is a cli application that simulates a basic game library and store system.The app support role based system with admin and gamer. Game data fetched from api and performed operations.GitHub Actions used to apply CI/CD workflow
 
 ## Table of Contents
 
