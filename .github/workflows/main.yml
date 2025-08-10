@@ -1,5 +1,7 @@
 name: GitHub Actions on Game Library
-on: [push]
+on:
+  push:
+    branches: ["feat/gamer-functionality"]
 jobs:
   Apply-GitHub-Actions:
     runs-on: ubuntu-latest
