@@ -2,22 +2,31 @@
 
 ## Description
 
-Game Library Management is a cli application that simulates a basic game library and store system.The app support role based system with admin and gamer. Game data fetched from api and performed operations.
+Game Library Management is a cli application that simulates a basic game library and store system.The app support role based system with admin and gamer. Game data fetched from api and performed operations.GitHub Actions used to apply CI/CD workflow
 
 ## Table of Contents
 
 - [Description](#-description)
+- [Features](#-features)
 - [Tech Stack](#-tech-stack)
 - [Clone Project](#-clone-project)
 - [Installation](#-installation)
 - [Start Project](#-start-project)
+- [Testing](#-testing)
 - [Contact Information](#-contact-information)
 - [Contributions](#-contributions)
+
+## Features
+
+- Search game => search game by keyword of title from available games.
+- Filter games by gamer choice like by price, genre and rating with validations.
+- Add game to wishlist by gamer by name or id and displayed wishlisted games in viewWishlist.
 
 ## Tech Stack
 
 - > Typescript
 - > Node.js for execution
+- > Jest for Testing
 
 ## Clone Project
 
@@ -40,6 +49,15 @@ cd game-library-management
     tsc             # Compile entry base file
     npm start       # Execute the compiled file
 ```
+
+## Testing
+
+- Jest is used for testing.
+- Test cases are written to verify expected outcome is returned or not.
+``` bash
+    npm run test           # To verify whether test passing
+    npm run test:coverage             # To verify the coverage 
+``` 
 
 ## Contact Information
 
