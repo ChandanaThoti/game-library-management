@@ -4,5 +4,11 @@ jobs:
   Apply-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - run: echo "Job triggered automatically by event"
-  
+      - name: Use Node.js ${{ matrix.node-version }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version:  21
+          cache: 'npm'
+      - run: npm run build --if-present
